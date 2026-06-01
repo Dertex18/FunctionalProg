@@ -11,5 +11,10 @@ public class Main {
         };
         int result = expample1.operate(10, 5);
         System.out.println(result);
+
+        StringManipultaion upperCase = text -> text.toUpperCase();
+        String resultString = upperCase.manipulate("hello world");
+        System.out.println(resultString);
+
     }
 }
