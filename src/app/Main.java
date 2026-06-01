@@ -1,6 +1,7 @@
 package app;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class Main {
 
@@ -23,6 +24,13 @@ public class Main {
         String testText = "Hilel IT School! April 2026";
         int resultUppercaseCounter = uppercaseCounter.apply(testText);
         System.out.printf("Result of upperCase: %d", resultUppercaseCounter);
+
+        Supplier<Integer> randomSupplier = () -> RandonNumberGenerator.generateRandomNumber(1, 100);
+
+        System.out.println("Generating number...");
+        for (int i = 1; i <= 3; i++) {
+            System.out.printf("Attempt %d) %d\n", i, randomSupplier.get());
+        }
 
     }
 }
